@@ -87,7 +87,7 @@ export default async (req, res) => {
                 console.log(login?.dataValues?.state, login?.dataValues?.retriesPassword);
                 const token = jwt.sign(
                     {
-                        userId: login.dataValues.id,
+                        userTechId: login.dataValues.id,
                         useremail: login.dataValues.email
                     },
                     SECRET_KEY,

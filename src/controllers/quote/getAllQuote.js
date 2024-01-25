@@ -16,7 +16,7 @@ export default async (req, res) => {
                         attributes: { exclude: ['createdAt', 'updatedAt', 'id'] }
                     }
                 },
-                { model: Customer, attributes: { exclude: ['createdAt', 'updatedAt', 'userId', ] } },
+                { model: Customer, attributes: { exclude: ['createdAt', 'updatedAt', 'userTechId', ] } },
                 { model: Product, attributes: { exclude: ['createdAt', 'updatedAt', 'products_quotes'] } }
             ],
         })

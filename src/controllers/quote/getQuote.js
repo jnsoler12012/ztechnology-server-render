@@ -22,7 +22,7 @@ export default async (req, res) => {
         attrGet['state'] = state
 
     if (idUserRequester !== null)
-        attrGet['userId'] = idUserRequester
+        attrGet['userTechId'] = idUserRequester
 
 
     try {
@@ -38,7 +38,7 @@ export default async (req, res) => {
                         attributes: { exclude: ['createdAt', 'updatedAt', 'id'] }
                     }
                 },
-                { model: Customer, attributes: { exclude: ['createdAt', 'updatedAt', 'userId',] } },
+                { model: Customer, attributes: { exclude: ['createdAt', 'updatedAt', 'userTechId',] } },
                 { model: Product, attributes: { exclude: ['createdAt', 'updatedAt', 'products_quotes'] } }
             ],
             where: {

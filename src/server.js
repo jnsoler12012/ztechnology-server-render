@@ -14,10 +14,10 @@ const defineRelations = () => {
     Role.hasOne(User, common({ foreignKey: 'roleId' }))
     User.belongsTo(Role);
 
-    User.hasMany(Customer, common({ foreignKey: 'userId' }))
+    User.hasMany(Customer, common({ foreignKey: 'userTechId' }))
     Customer.belongsTo(User);
 
-    User.hasMany(Product, common({ foreignKey: 'userId' }))
+    User.hasMany(Product, common({ foreignKey: 'userTechId' }))
     Product.belongsTo(User);
 
     
@@ -28,7 +28,7 @@ const defineRelations = () => {
     Customer.hasMany(Quote, common({ foreignKey: 'customerId' }))
     Quote.belongsTo(Customer);
 
-    User.hasMany(Quote, common({ foreignKey: 'userId' }))
+    User.hasMany(Quote, common({ foreignKey: 'userTechId' }))
     Quote.belongsTo(User);
     
 }

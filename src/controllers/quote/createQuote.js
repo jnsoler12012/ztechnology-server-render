@@ -55,7 +55,7 @@ export default async (req, res) => {
             const quoteCreated = await Quote.create({
                 id, description, discountType, discount, total, subTotal, deliveryType, state,
                 customerId: customerRequester.dataValues.id,
-                userId: userRequester.dataValues.id,
+                userTechId: userRequester.dataValues.id,
             })
 
             const productsUpdated = await Product.update({ available: false }, {

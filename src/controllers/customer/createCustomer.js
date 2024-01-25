@@ -20,7 +20,7 @@ export default async (req, res) => {
             }
 
         const customer = await Customer.create({
-            names, document, email, city, address, phone, userId: idRequester
+            names, document, email, city, address, phone, userTechId: idRequester
         })
 
         return res.status(200).json({

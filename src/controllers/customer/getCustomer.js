@@ -4,7 +4,7 @@ import errorController from '../errorController.js'
 export default async (req, res) => {
     console.log("=====_____Peticion recibida para modificar", req.body)
 
-    const { names, document, email, city, address, phone, idRequired, userId } = req.body
+    const { names, document, email, city, address, phone, idRequired, userTechId } = req.body
 
     let attrGet = {}
 
@@ -29,8 +29,8 @@ export default async (req, res) => {
     if (phone)
         attrGet['phone'] = phone
 
-    if (userId)
-        attrGet['userId'] = userId
+    if (userTechId)
+        attrGet['userTechId'] = userTechId
 
 
     try {

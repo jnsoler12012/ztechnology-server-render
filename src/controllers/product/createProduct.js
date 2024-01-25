@@ -23,11 +23,11 @@ export default async (req, res) => {
         let product
         if (counterProduct == 0) {
             product = await Product.create({
-                name, type, description, price, available: false, userId: idRequester
+                name, type, description, price, available: false, userTechId: idRequester
             })
         } else if (counterProduct == 1) {
             product = await Product.create({
-                name, type, description, price, available: true, userId: idRequester
+                name, type, description, price, available: true, userTechId: idRequester
             })
         } else if (counterProduct > 1) {
             let objAttributesProduct = []

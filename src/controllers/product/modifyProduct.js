@@ -99,7 +99,7 @@ export default async (req, res) => {
             console.log(idsAssociated, counterNewProducts);
 
             for (let x = 0; x < counterNewProducts; x++)
-                objAttributesProduct.push({ name, description, price, type, available: true, userId: idRequester })
+                objAttributesProduct.push({ name, description, price, type, available: true, userTechId: idRequester })
 
             console.log(objAttributesProduct);
 
