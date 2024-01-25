@@ -10,6 +10,7 @@
   "scripts": {
     "startNodemon": "nodemon ./src/index.js",
     "start": "npm run startNodemon & webpack-dev-server --inline --hot",
+    "startRender": "node ./build/bundle.js",
     "build": "webpack --env NODE_ENV=production --progress",
     "startServer": "npm run build && node build/bundle.js"
   },
