@@ -26,11 +26,11 @@ export default (sequelize) => {
                 type: DataTypes.FLOAT,
             },
             total: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.FLOAT,
                 allowNull: false,
             },
             subTotal: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.FLOAT,
             },
             deliveryType: {
                 type: DataTypes.ENUM(['Premium', 'Paid', 'Standard']),
