@@ -38,7 +38,7 @@ export default (sequelize) => {
                 allowNull: false,
             },
             retriesPassword: {
-                type: DataTypes.TINYINT,
+                type: DataTypes.INTEGER,
             },
             timerDisableAccount: {
                 type: DataTypes.DATE,
@@ -48,7 +48,7 @@ export default (sequelize) => {
                 allowNull: false,
             }
         },
-        { ...commonOptions, modelName: 'user', sequelize }
+        { ...commonOptions, modelName: 'userTech', sequelize }
     );
     User.beforeSync(() => console.log('before creaing the table'));
     User.afterSync(() => console.log('before creaing the table'));
